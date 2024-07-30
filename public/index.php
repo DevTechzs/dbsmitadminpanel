@@ -50,19 +50,8 @@ use app\misc\MSC;
 use app\misc\IPLogger;
 use app\database\DBController;
 use app\modules\auth\classes\Password;
-use app\modules\clients\ClientController;
 use app\modules\filemanager\FileController;
-use app\modules\settings\SettingController;
-use app\modules\products\ProductsController;
-use app\modules\supports\SupportController;
-use app\modules\supportTicket\SupportTicketController;
-//newly added
-use app\modules\careers\CareerController;
-use app\modules\supportTicket\classes\SupportTicket;
-use app\modules\staff\StaffController; //added by dev on 19/01/24
-use app\modules\administration\AdministrationController;
-use app\modules\marketings\MarketingController;
-use app\modules\hr\HRController;
+use app\modules\gallery\GalleryController;
 
 if (!isset($data["JSON"])) {
     $data["JSON"] = "";
@@ -96,15 +85,7 @@ if (isset($data["Module"]) && isset($data["Page_key"]) && isset($data["JSON"])) 
 
     if (AuthenticationController::isValidSession($data)) {
         switch ($data["Module"]) {
-            case "Settings":
-                $result = (new SettingController())->Route($data);
-                break;
-            case "Client":
-                $result = (new ClientController())->Route($data);
-                break;
-            case "Products":
-                $result = (new ProductsController())->Route($data);
-                break;
+           
             case "file":
                 FileController::File();
                 break;
@@ -114,22 +95,10 @@ if (isset($data["Module"]) && isset($data["Page_key"]) && isset($data["JSON"])) 
             case "Careers":
                 $result = (new CareerController())->Route($data);
                 break;
-            case "SupportTicket":
-                $result = (new SupportTicketController())->Route($data);
+           
+  case "Gallery":
+                $result = (new GalleryController())->Route($data);
                 break;
-            case "Staff": //added by dev on 19/01/24
-                $result = (new StaffController())->Route($data);
-                break;
-            case "Administration":
-                $result = (new AdministrationController())->Route($data);
-                break;
-            case "Marketings":
-                $result = (new MarketingController())->Route($data);
-                break;
-            case "HR":
-                $result = (new HRController())->Route($data);
-                break;
-
             default:
                 $result = array("return_code" => false, "return_data" => array("Module key not found"));
                 session_destroy();
@@ -144,9 +113,7 @@ if (isset($data["Module"]) && isset($data["Page_key"]) && isset($data["JSON"])) 
 
         switch ($data["Module"]) {
 
-            case "Careers":
-                $result = (new CareerController())->Route($data);
-                break;
+            
 
             case "file":
                 FileController::File();
@@ -155,19 +122,12 @@ if (isset($data["Module"]) && isset($data["Page_key"]) && isset($data["JSON"])) 
             case "Auth":
                 $result = (new AuthenticationController())->Route($data);
                 break;
-
-            case "Client":
-                if ($data["Page_key"] = "getClientsByProductCode") {
-                    // $result = (new \app\modules\clients\classes\Client())->getClientsByProductCode($data["JSON"]);
-                }
-
-                if ($data["Page_key"] = "getClientsBySubscriptionCode") {
-                    $result = (new \app\modules\clients\classes\Client())->getClientsBySubscriptionCode($data["JSON"]);
-                } else {
-                    $result = array("return_code" => false, "return_data" => array("Key not found"));
-                }
+ case "Gallery":
+                $result = (new GalleryController())->Route($data);
                 break;
 
+
+                
             default:
                 //$result = (new ProductsController())->Route($data);
                 $result = array("return_code" => false, "return_data" => array("Key not found"));
@@ -210,43 +170,9 @@ if (isset($data["Module"]) && isset($data["Page_key"]) && isset($data["JSON"])) 
         case "auth":
             AuthenticationController::Views($page);
             break;
-        case "clients":
-            ClientController::Views($page);
+        case "gallery":
+            GalleryController::Views($page);
             break;
-        case "products":
-            ProductsController::Views($page);
-            break;
-        case "file":
-            FileController::File();
-            break;
-        case "settings":
-            SettingController::Views($page);
-            break;
-        case "careers":
-            CareerController::Views($page);
-            break;
-
-        case "supports":
-            SupportController::Views($page);
-            break;
-        case "supportTicket":
-            SupportTicketController::Views($page);
-            break;
-        case "staff":
-            StaffController::Views($page); //added by dev on 19/01/24
-            break;
-        case "administration":
-            AdministrationController::Views($page); //added by dev on 19/01/24
-            break;
-
-        case "marketings":
-            MarketingController::Views($page);
-            break;
-
-        case "hr":
-            HRController::Views($page);
-            break;
-
 
 
         case "logout":

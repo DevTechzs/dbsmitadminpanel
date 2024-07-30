@@ -24,24 +24,24 @@
                         <a href="#dashboard" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-dashboard yellow_color"></i> <span>Dashboard</span></a>
                         <ul class="collapse list-unstyled" id="dashboard">
                            <li>
-                              <a href="dashboard.html">> <span>Default Dashboard</span></a>
+                              <a href="dashboard"> <span>Default Dashboard</span></a>
                            </li>
-                           <li>
-                              <a href="dashboard_2.html">> <span>Dashboard style 2</span></a>
-                           </li>
+                           <!-- <li>
+                              <a href="dashboard_2.html"><span>Dashboard style 2</span></a>
+                           </li> -->
                         </ul>
                      </li>
                      <li><a href="widgets.html"><i class="fa fa-clock-o orange_color"></i> <span>Widgets</span></a></li>
                      <li>
-                        <a href="#element" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-diamond purple_color"></i> <span>Elements</span></a>
+                        <a href="#element" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-photo purple_color"></i> <span>Gallery</span></a>
                         <ul class="collapse list-unstyled" id="element">
-                           <li><a href="general_elements.html">> <span>General Elements</span></a></li>
-                           <li><a href="media_gallery.html">> <span>Media Gallery</span></a></li>
-                           <li><a href="icons.html">> <span>Icons</span></a></li>
-                           <li><a href="invoice.html">> <span>Invoice</span></a></li>
+                           <!-- <li><a href="general_elements.html">> <span>General Elements</span></a></li> -->
+                           <li><a href="gallery"><span>Media Gallery</span></a></li>
+                           <!-- <li><a href="icons.html">> <span>Icons</span></a></li>
+                           <li><a href="invoice.html">> <span>Invoice</span></a></li> -->
                         </ul>
                      </li>
-                     <li><a href="tables.html"><i class="fa fa-table purple_color2"></i> <span>Tables</span></a></li>
+                     <!-- <li><a href="tables.html"><i class="fa fa-table purple_color2"></i> <span>Tables</span></a></li>
                      <li>
                         <a href="#apps" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-object-group blue2_color"></i> <span>Apps</span></a>
                         <ul class="collapse list-unstyled" id="apps">
@@ -75,7 +75,7 @@
                      <li><a href="map.html"><i class="fa fa-map purple_color2"></i> <span>Map</span></a></li>
                      <li><a href="charts.html"><i class="fa fa-bar-chart-o green_color"></i> <span>Charts</span></a></li>
                      <li><a href="settings.html"><i class="fa fa-cog yellow_color"></i> <span>Settings</span></a></li>
-                  </ul>
+                  </ul> -->
                </div>
             </nav>
             <!-- end sidebar -->

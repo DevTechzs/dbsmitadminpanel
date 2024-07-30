@@ -47,9 +47,7 @@ require_once("../vendor/autoload.php");
 
 use app\modules\auth\AuthenticationController;
 use app\misc\MSC;
-use app\misc\IPLogger;
 use app\database\DBController;
-use app\modules\auth\classes\Password;
 use app\modules\filemanager\FileController;
 use app\modules\gallery\GalleryController;
 
@@ -85,18 +83,16 @@ if (isset($data["Module"]) && isset($data["Page_key"]) && isset($data["JSON"])) 
 
     if (AuthenticationController::isValidSession($data)) {
         switch ($data["Module"]) {
-           
+
             case "file":
                 FileController::File();
                 break;
             case "Auth":
                 $result = (new AuthenticationController())->Route($data);
                 break;
-            case "Careers":
-                $result = (new CareerController())->Route($data);
-                break;
-           
-  case "Gallery":
+
+
+            case "Gallery":
                 $result = (new GalleryController())->Route($data);
                 break;
             default:
@@ -113,7 +109,7 @@ if (isset($data["Module"]) && isset($data["Page_key"]) && isset($data["JSON"])) 
 
         switch ($data["Module"]) {
 
-            
+
 
             case "file":
                 FileController::File();
@@ -122,12 +118,9 @@ if (isset($data["Module"]) && isset($data["Page_key"]) && isset($data["JSON"])) 
             case "Auth":
                 $result = (new AuthenticationController())->Route($data);
                 break;
- case "Gallery":
-                $result = (new GalleryController())->Route($data);
-                break;
+            
 
 
-                
             default:
                 //$result = (new ProductsController())->Route($data);
                 $result = array("return_code" => false, "return_data" => array("Key not found"));
@@ -172,14 +165,14 @@ if (isset($data["Module"]) && isset($data["Page_key"]) && isset($data["JSON"])) 
             break;
         case "gallery":
             GalleryController::Views($page);
-            break;
+                break;
 
 
         case "logout":
             session_destroy();
             header('Location: login');
             ob_end_flush();
-            exit;   
+            exit;
             break;
 
         default:

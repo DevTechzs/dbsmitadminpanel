@@ -35,8 +35,7 @@ class GalleryController implements Controller
     {
         $viewpath = "../app/modules/gallery/views/";
 
-        switch ($page[1]) {
-
+        switch ($page[0]) {
             case 'gallery':
                 load($viewpath . "gallery.php");
                 break;

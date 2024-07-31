@@ -11,7 +11,7 @@ namespace app\modules\notice;
 use app\core\Controller;
 use app\modules\notice\classes\Notice;
 
-class GalleryController implements Controller
+class NoticeController implements Controller
 {
     function Route($data)
     {

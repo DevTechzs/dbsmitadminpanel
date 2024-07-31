@@ -1,48 +1,66 @@
   <!-- Sidebar  -->
   <nav id="sidebar">
-               <div class="sidebar_blog_1">
-                  <div class="sidebar-header">
-                     <div class="logo_section">
-                        <a href="index.html"><img class="logo_icon img-responsive" src="https://img.freepik.com/premium-vector/businessman-icon-flat-color-style_755164-741.jpg?w=740" alt="#" /></a>
-                     </div>
+      <div class="sidebar_blog_1">
+          <div class="sidebar-header">
+              <div class="logo_section">
+                  <a href="index.html"><img class="logo_icon img-responsive"
+                          src="https://img.freepik.com/premium-vector/businessman-icon-flat-color-style_755164-741.jpg?w=740"
+                          alt="#" /></a>
+              </div>
+          </div>
+          <div class="sidebar_user_info">
+              <div class="icon_setting"></div>
+              <div class="user_profle_side">
+                  <div class="user_img"><img class="img-responsive"
+                          src="https://img.freepik.com/premium-vector/businessman-icon-flat-color-style_755164-741.jpg?w=740"
+                          alt="#" /></div>
+                  <div class="user_info">
+                      <h6><?php echo $_SESSION["Username"];?></h6>
+                      <p><span class="online_animation"></span> Online</p>
                   </div>
-                  <div class="sidebar_user_info">
-                     <div class="icon_setting"></div>
-                     <div class="user_profle_side">
-                        <div class="user_img"><img class="img-responsive" src="https://img.freepik.com/premium-vector/businessman-icon-flat-color-style_755164-741.jpg?w=740" alt="#" /></div>
-                        <div class="user_info">
-                           <h6><?php echo $_SESSION["Username"];?></h6>
-                           <p><span class="online_animation"></span> Online</p>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="sidebar_blog_2">
-                  <h4>General</h4>
-                  <ul class="list-unstyled components">
-                     <li class="active">
-                        <a href="#dashboard" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-dashboard yellow_color"></i> <span>Dashboard</span></a>
-                        <ul class="collapse list-unstyled" id="dashboard">
-                           <li>
-                              <a href="dashboard"> <span>Default Dashboard</span></a>
-                           </li>
-                           <!-- <li>
+              </div>
+          </div>
+      </div>
+      <div class="sidebar_blog_2">
+          <h4>General</h4>
+          <ul class="list-unstyled components">
+              <li class="active">
+                  <a href="#dashboard" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i
+                          class="fa fa-dashboard yellow_color"></i> <span>Dashboard</span></a>
+                  <ul class="collapse list-unstyled" id="dashboard">
+                      <li>
+                          <a href="dashboard"> <span>Default Dashboard</span></a>
+                      </li>
+                      <!-- <li>
                               <a href="dashboard_2.html"><span>Dashboard style 2</span></a>
                            </li> -->
-                        </ul>
-                     </li>
-                     <li><a href="widgets.html"><i class="fa fa-clock-o orange_color"></i> <span>Widgets</span></a></li>
-                     <li>
-                        <a href="gallery"><i class="fa fa-photo purple_color"></i> <span>Gallery</span></a>
-                        <!-- <ul class="collapse list-unstyled" id="element"> -->
-                           <!-- <li><a href="general_elements.html">> <span>General Elements</span></a></li> -->
-                           <!-- <li><a href="gallery"><span>Media Gallery</span></a></li> -->
-                           <!-- <li><a href="icons.html">> <span>Icons</span></a></li>
+                  </ul>
+              </li>
+              <li><a href="widgets.html"><i class="fa fa-clock-o orange_color"></i> <span>Widgets</span></a></li>
+              <li>
+                  <a href="gallery"><i class="fa fa-photo purple_color"></i> <span>Gallery</span></a>
+                  <!-- <ul class="collapse list-unstyled" id="element"> -->
+                  <!-- <li><a href="general_elements.html">> <span>General Elements</span></a></li> -->
+                  <!-- <li><a href="gallery"><span>Media Gallery</span></a></li> -->
+                  <!-- <li><a href="icons.html">> <span>Icons</span></a></li>
                            <li><a href="invoice.html">> <span>Invoice</span></a></li> -->
-                        <!-- </ul> -->
-                     </li>
-                     <li><a href="notice"><i class="fa fa-bell purple_color2"></i> <span>Notice</span></a></li>
-                     <!-- <li>
+                  <!-- </ul> -->
+              </li>
+              <!-- <li><a href="notice" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i
+                          class="fa fa-bell purple_color2"></i> <span>Notice</span></a>
+                  <ul class="collapse list-unstyled" id="apps">
+                      <li><a href="email.html">> <span>Calendar</span></a></li>
+              </li> -->
+              <li>
+                  <a href="#element" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i
+                          class="fa fa-bell red_color"></i> <span>Notice</span></a>
+                  <ul class="collapse list-unstyled" id="element">
+                      <li><a href="notice"> <span>Notice</span></a></li>
+                      <li><a href="notice-calendar"> <span>Calendar</span></a></li>
+                  </ul>
+              </li>
+</ul>
+              <!-- <li>
                         <a href="#apps" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-object-group blue2_color"></i> <span>Apps</span></a>
                         <ul class="collapse list-unstyled" id="apps">
                            <li><a href="email.html">> <span>Email</span></a></li>
@@ -76,8 +94,6 @@
                      <li><a href="charts.html"><i class="fa fa-bar-chart-o green_color"></i> <span>Charts</span></a></li>
                      <li><a href="settings.html"><i class="fa fa-cog yellow_color"></i> <span>Settings</span></a></li>
                   </ul> -->
-               </div>
-            </nav>
-            <!-- end sidebar -->
-
-            
+      </div>
+  </nav>
+  <!-- end sidebar -->

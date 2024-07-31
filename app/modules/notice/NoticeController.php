@@ -39,7 +39,9 @@ class NoticeController implements Controller
             case 'notice':
                 load($viewpath . "notice.php");
                 break;
-
+                case 'calendar':
+                    load($viewpath . "calendar.php");
+                    break;
           
             default:
                 // session_destroy();

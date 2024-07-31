@@ -41,8 +41,8 @@
                            <li><a href="invoice.html">> <span>Invoice</span></a></li> -->
                         </ul>
                      </li>
-                     <!-- <li><a href="tables.html"><i class="fa fa-table purple_color2"></i> <span>Tables</span></a></li>
-                     <li>
+                     <li><a href="notice"><i class="fa fa-bell purple_color2"></i> <span>Notice</span></a></li>
+                     <!-- <li>
                         <a href="#apps" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-object-group blue2_color"></i> <span>Apps</span></a>
                         <ul class="collapse list-unstyled" id="apps">
                            <li><a href="email.html">> <span>Email</span></a></li>

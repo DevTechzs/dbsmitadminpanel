@@ -50,6 +50,8 @@ use app\misc\MSC;
 use app\database\DBController;
 use app\modules\filemanager\FileController;
 use app\modules\gallery\GalleryController;
+use app\modules\notice\NoticeController;
+
 
 if (!isset($data["JSON"])) {
     $data["JSON"] = "";
@@ -95,6 +97,10 @@ if (isset($data["Module"]) && isset($data["Page_key"]) && isset($data["JSON"])) 
             case "Gallery":
                 $result = (new GalleryController())->Route($data);
                 break;
+            case "Notice":
+                    $result = (new NoticeController())->Route($data);
+                    break;    
+
             default:
                 $result = array("return_code" => false, "return_data" => array("Module key not found"));
                 session_destroy();
@@ -166,6 +172,9 @@ if (isset($data["Module"]) && isset($data["Page_key"]) && isset($data["JSON"])) 
         case "gallery":
             GalleryController::Views($page);
             break;
+        case "notice":
+                NoticeController::Views($page);
+                break;
 
 
         case "logout":

@@ -1,18 +1,1 @@
 
-
-30-07-24 05:39:32 : Unknown error type: [2] Undefined array key 1<br />
-  Fatal error on line 38 in file C:\xampp\htdocs\dbsmitadminpanel\app\modules\gallery\GalleryController.php
-Aborting...<br />
-
-
-30-07-24 05:44:03 : Unknown error type: [2] Undefined array key 1<br />
-  Fatal error on line 38 in file C:\xampp\htdocs\dbsmitadminpanel\app\modules\gallery\GalleryController.php
-Aborting...<br />
-
-
-30-07-24 05:44:50 : Unknown error type: [2] Undefined array key 1<br />
-  Fatal error on line 38 in file C:\xampp\htdocs\dbsmitadminpanel\app\modules\gallery\GalleryController.php
-Aborting...<br />
-
-
-31-07-24 10:35:09 : Reached request Login

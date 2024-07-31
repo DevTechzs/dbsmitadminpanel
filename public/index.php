@@ -118,7 +118,7 @@ if (isset($data["Module"]) && isset($data["Page_key"]) && isset($data["JSON"])) 
             case "Auth":
                 $result = (new AuthenticationController())->Route($data);
                 break;
-            
+
 
 
             default:
@@ -165,7 +165,7 @@ if (isset($data["Module"]) && isset($data["Page_key"]) && isset($data["JSON"])) 
             break;
         case "gallery":
             GalleryController::Views($page);
-                break;
+            break;
 
 
         case "logout":
